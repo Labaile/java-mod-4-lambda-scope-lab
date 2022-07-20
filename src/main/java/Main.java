@@ -1,11 +1,11 @@
 import java.util.function.UnaryOperator;
 
 public class Main {
-    String PREFIX = "__prefix__";
-    String SUFFIX = "__suffix__";
+    public static String PREFIX = "__prefix__";
+    public static String SUFFIX = "__suffix__";
 	
 	// fix the operator code
-    public static UnaryOperator<String> operator = str -> str;
+    public static UnaryOperator<String> operator = str -> str.replaceAll("\\s","");
 
     public static void main(String[] args) {
         String res = operator.apply("  hello"); 
